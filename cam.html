@@ -24,7 +24,7 @@
 	<button id="start">Start</button>
 	<script type="text/javascript">
 		if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-			var type = MediaRecorder.isTypeSupported("video/webm") ? "video/webm" : "video/mp4";
+			var type = MediaRecorder.isTypeSupported("video/mp4") ? "video/mp4" : "video/webm;codecs=vp8";
 
 			const video = document.querySelector('video');
 			const button = document.querySelector('#start');
