@@ -1,0 +1,19 @@
+{
+  "name": "web-rtc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtemGrinn/web-rtc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtemGrinn/web-rtc/issues"
+  },
+  "homepage": "https://github.com/ArtemGrinn/web-rtc#readme",
+  "dependencies": {
+    "ws": "^7.4.4"
+  }
+}
