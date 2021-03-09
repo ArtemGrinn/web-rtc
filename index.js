@@ -15,8 +15,10 @@ console.log("server listening on %d", port)
 var wss = new WebSocketServer({server: server})
 console.log("websocket server created")
 wss.on('connection', (ws) => {
-	console.log('connect');
-  	const fileStream = fs.createWriteStream('./output.mp4', { flags: 'a' });
+	let date = new Date();
+	let id = date.getMinutes() + "-" + date.getSeconds();
+	console.log(`connect, id=output_${id}.mp4`);
+  	const fileStream = fs.createWriteStream(`./output_${id}.mp4`, { flags: 'a' });
  	ws.on('message', message => {
 	  	console.log('recieving');
 	    fileStream.write(Buffer.from(new Uint8Array(message)));
