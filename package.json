@@ -15,5 +15,8 @@
   "homepage": "https://github.com/ArtemGrinn/web-rtc#readme",
   "dependencies": {
     "ws": "^7.4.4"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
