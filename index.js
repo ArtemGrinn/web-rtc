@@ -17,12 +17,11 @@ console.log("websocket server created")
 wss.on('connection', (ws) => {
 	console.log('connect');
   	const fileStream = fs.createWriteStream('./output.mp4', { flags: 'a' });
- 	 ws.on('message', message => {
+ 	ws.on('message', message => {
 	  	console.log('recieving');
 	    fileStream.write(Buffer.from(new Uint8Array(message)));
   	});
 	ws.on("close", function() {
 		console.log("websocket connection close")
-		clearInterval(id)
 	});
 });

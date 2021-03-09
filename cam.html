@@ -35,12 +35,12 @@
  			const go = async () => {
 			  	const devices = await navigator.mediaDevices.enumerateDevices();
 	  			const videoDevices = devices.filter(device => device.kind === 'videoinput');
-				alert(JSON.stringify(videoDevices));
+				console.log(JSON.stringify(videoDevices));
 	  			if (videoDevices.length === 0){
 	  				console.log("Video devices not found");
 	  				return;
 	  			}
-			const socket = new WebSocket('wss://webrtc-server2.herokuapp.com:51375');
+			const socket = new WebSocket('wss://webrtc-server2.herokuapp.com');
 			const recorderOptions = {
 			  mimeType: type,
 			  videoBitsPerSecond: 200000 // 0.2 Mbit/sec.
